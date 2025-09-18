@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/assets/css/game.css">
+    <link rel="shortcut icon" href="src/assets/img/controle-de-video-game.png" type="image/x-icon">
+    <title>Quiz do programador</title>
+</head>
+<body>
+    <div class="circleSh"></div>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="more">+++</div>
+    <div class="more1">+ <br> + <br> +</div>
+    <div class="border"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+    <div class="correct"></div>
+    <div id="correctAns">
+        <p id="ans"></p>
+        <button type="submit" id="btnC">continuar</button>
+    </div>
+    <main>
+        <div class="question">
+            <h1 id="numberQ"></h1>
+            <p id="text"></p>
+
+            <div class="form">
+                <div class="choice">
+                    <input type="radio" name="opt" id="opt1" value="A">
+                    <label for="opt1" class="btn" id="opts1"></label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="opt" id="opt2" value="B">
+                    <label for="opt2" class="btn" id="opts2"></label></label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="opt" id="opt3" value="C">
+                    <label for="opt3" class="btn" id="opts3"></label></label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="opt" id="opt4" value="D">
+                    <label for="opt4" class="btn" id="opts4"></label></label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="opt" id="opt5" value="E">
+                    <label for="opt5" class="btn" id="opts5"></label></label>
+                </div>
+                <button type="submit" id="btnS">Verificar</button>
+            </div>
+        </div>
+        <div class="img2"><img src="src/assets/img/chat_10527695.png" alt="chat-image"></div>
+        <div class="img3"><img src="src/assets/img/plan_10755488.png" alt="plan-image"></div>
+    </main>
+
+    <script src="src/js/game.js"></script>
+</body>
+</html>

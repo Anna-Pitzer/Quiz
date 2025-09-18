@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color01: #040926;
+    --color02: #96acd9;
+    --color03: #ffffff;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--color01);
+    color: var(--color03);
+}
+
+.circleSh {
+    position: fixed;
+    top: -250px;
+    left: -10%;
+    background-image: linear-gradient(180deg, var(--color02), transparent);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+}
+
+.question {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--color02);
+    width: 600px;
+    height: 90vh;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;      
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: var(--color01);
+    text-align: left;
+    margin: 0px 20px;
+}
+
+p {
+    font-size: 18px;
+    color: black;
+    margin: 0px 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;   
+    align-items: center;   
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    background-color: var(--color01);
+    color: var(--color03);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70vh;
+    margin: 5px 10px;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+input[type="radio"]:checked + label.btn {
+    background-color: #51548C;
+    color: var(--color03);
+    border: none;
+}
+
+#btnS {
+    padding: 24px 64px;
+    background: linear-gradient(135deg, var(--color01), var(--color01));
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: var(--color03);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all .5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.262);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#btnS::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1000%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.314), transparent);
+    transition: left .5s;
+}
+
+#btnS:hover::before {
+    left: 100%;
+}
+
+#btnS:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.262);
+}
+
+#btnS:active {
+    transform: translateY(-1px);
+}
+
+.img2 {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    transform: scale(1.1) scaleX(-1) rotate(15deg);
+    z-index: 1;
+}
+
+.img3 {
+    position: fixed;
+    top: 59%;
+    left: 63%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.c1 {
+  position: fixed;
+  top: 7%;
+  left:92.5%;
+  background-color: var(--color01);
+  border: 1px solid var(--color02);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.c2 {
+  position: fixed;
+  top: 7%;
+  left: 95%;
+  background-color: var(--color02);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.more {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  position: fixed;
+  top: 91.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color03);
+}
+
+.more1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  position: fixed;
+  top: 25%;
+  left: 95%;
+  transform: translateX(-50%);
+  color: var(--color03);
+}
+
+.border {
+    position: fixed;
+    top: 60%;
+    left: -8%;
+    width: 300px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px dashed var(--color03);
+}
+
+.c3 {
+  position: fixed;
+  top: 93%;
+  left:3%;
+  background-color: var(--color01);
+  border: 1px solid var(--color02);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.c4 {
+  position: fixed;
+  top: 88.5%;
+  left: 3%;
+  background-color: var(--color02);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+#correctAns {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--color02);
+    width: 700px;
+    height: 710px;
+    border-radius: 30px;
+    z-index: 999;
+    visibility: hidden;
+}
+
+#correctAns p {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    margin: 40px;
+}
+
+#btnC {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, var(--color01), var(--color01));
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: var(--color03);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all .5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.262);
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#btnC::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1000%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.314), transparent);
+    transition: left .5s;
+}
+
+#btnC:hover::before {
+    left: 100%;
+}
+
+#btnC:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.262);
+}
+
+#btnC:active {
+    transform: translateY(-1px);
+}
