@@ -18,6 +18,7 @@ body {
   line-height: 1.6;
   background-color: var(--color01);
   color: var(--color03);
+  overflow-x: hidden;
 }
 
 #loading {
@@ -123,7 +124,9 @@ body.loaded {
   justify-content: center;     
   align-items: center;         
   height: 90vh;                
-  text-align: center;           
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -226,4 +229,62 @@ button:active {
   background-color: transparent;
   border-radius: 30px;
   border: 2px dashed var(--color03);
+}
+
+@media (max-width: 575px) and (min-width: 481px) {
+  .bkg1 {
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px solid var(--color02);
+  }
+  
+  .container {
+    height: 75vh;
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .more {
+    font-size: 2.5rem;
+    top: 88%;
+  }
+  
+  button {
+    padding: 16px 35px;
+    font-size: 14px;
+  }
+  
+  .img1 {
+    top: 64%;
+    left: -20px;
+    transform: scaleX(-1) scale(.8);
+  }
+  
+  .img2 {
+    left: 55%;
+    top: 60%;
+    transform: scaleX(-1) scale(0.7);
+  }
+  
+  .img3 {
+    top: 60%;
+    left: 2%;
+    transform: scaleX(-1) scale(0.6);
+  }
+  
+  .c2 {
+    left: 12%;
+  }
+  
 }

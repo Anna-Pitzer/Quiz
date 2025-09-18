@@ -293,3 +293,47 @@ input[type="radio"]:checked + label.btn {
 #btnC:active {
     transform: translateY(-1px);
 }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .img2 {
+    left: -35px;
+    transform:  scaleX(-1) scale(0.6) rotate(15deg);
+  }
+
+  .img3 {
+    left: 64%;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 575px) and (min-width: 481px) {
+    .question {
+        max-width: 300px;
+    }
+
+    .btn {
+        width: 40vh;
+    }
+    
+    .btnS {
+        padding: 20px 30px;
+    }
+
+    .img2 {
+        left: -20%;
+        transform:  scaleX(-1) scale(0.4) rotate(15deg);
+    }
+    .img3 {
+        transform: scale(0.7);
+    }
+
+    #correctAns {
+        max-width: 300px;
+        max-height: 600px;
+    }
+
+    #correctAns p {
+        font-size: 16px;
+        margin: 10px;
+    }
+}
