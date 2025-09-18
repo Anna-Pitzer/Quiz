@@ -231,7 +231,7 @@ button:active {
   border: 2px dashed var(--color03);
 }
 
-@media (max-width: 575px) and (min-width: 481px) {
+@media (max-width: 575px) {
   .bkg1 {
     top: 15px;
     right: 15px;
