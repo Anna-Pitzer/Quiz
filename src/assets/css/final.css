@@ -154,7 +154,7 @@ h2 {
     border: 2px dashed var(--color03);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .container {
         max-width: 300px;
     }

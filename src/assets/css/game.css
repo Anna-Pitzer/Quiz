@@ -306,13 +306,13 @@ input[type="radio"]:checked + label.btn {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .question {
         max-width: 300px;
     }
 
     .btn {
-        width: 40vh;
+        width: 35vh;
     }
     
     .btnS {
