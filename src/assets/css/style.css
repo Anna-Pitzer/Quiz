@@ -82,6 +82,16 @@ body.loaded {
   border-radius: 8px;
   box-sizing: border-box;
   pointer-events: none;
+  animation: borderPulse 4s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% { 
+    opacity: 0.6; 
+  }
+  50% { 
+    opacity: 1; 
+  }
 }
 
 .circleSh {
@@ -92,31 +102,85 @@ body.loaded {
   width: 500px;
   height: 500px;
   border-radius: 50%;
+  animation: floatCircle 20s ease-in-out infinite;
+}
+
+@keyframes floatCircle {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  50% { 
+    transform: translate(-30px, 40px) scale(1.1); 
+  }
+}
+
+.img1, .img2, .img3 {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.img1 img, .img2 img {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.img3 img {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
 .img1 {
-  position: fixed;
   top: 60%;
   left: 30px;
   transform: scaleX(-1) scale(1.2);
-  z-index: 1;
+  animation: floatImg1 6s ease-in-out infinite;
 }
 
 .img2 {
-  position: fixed;
   top: 55%;
   left: 77%;
   transform: scaleX(-1) scale(1.2);
-  z-index: 1;
+  animation: floatImg2 7s ease-in-out infinite;
 }
 
 .img3 {
-  position: fixed;
   top: 45%;
   left: 5%;
   transform: scaleX(-1) scale(1.2);
-  z-index: 1;
+  animation: floatImg3 8s ease-in-out infinite;
 }
+
+@keyframes floatImg1 {
+  0%, 100% { 
+    transform: scaleX(-1) scale(1.2) translateY(0); 
+  }
+  50% { 
+    transform: scaleX(-1) scale(1.2) translateY(-20px); 
+  }
+}
+
+@keyframes floatImg2 {
+  0%, 100% { 
+    transform: scaleX(-1) scale(1.2) translateY(0); 
+  }
+  50% { 
+    transform: scaleX(-1) scale(1.2) translateY(20px); 
+  }
+}
+
+@keyframes floatImg3 {
+  0%, 100% { 
+    transform: scaleX(-1) scale(1.2) translateY(0); 
+  }
+  50% { 
+    transform: scaleX(-1) scale(1.2) translateY(-15px); 
+  }
+}
+
 
 .container {
   display: flex;
@@ -194,6 +258,7 @@ button:active {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  animation: bounce1 2s ease-in-out infinite;
 }
 
 .c2 {
@@ -205,6 +270,16 @@ button:active {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  animation: bounce1 2s ease-in-out infinite;
+}
+
+@keyframes bounce1 {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
 }
 
 .more {
@@ -229,62 +304,88 @@ button:active {
   background-color: transparent;
   border-radius: 30px;
   border: 2px dashed var(--color03);
+  opacity: 0.2;
 }
 
 @media (max-width: 768px) {
   .bkg1 {
-    top: 15px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
-    border: 1px solid var(--color02);
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      border: 1px solid var(--color02);
   }
   
   .container {
-    height: 75vh;
-    padding: 15px;
+      height: 75vh;
+      padding: 15px;
   }
   
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
   }
   
   h2 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
   }
   
   .more {
-    font-size: 2.5rem;
-    top: 88%;
+      font-size: 2.5rem;
+      top: 88%;
   }
   
   button {
-    padding: 16px 35px;
-    font-size: 14px;
+      padding: 16px 35px;
+      font-size: 14px;
   }
   
   .img1 {
-    top: 64%;
-    left: -20px;
-    transform: scaleX(-1) scale(.8);
+      top: 64%;
+      left: -20px;
+      transform: scaleX(-1) scale(.8);
+  }
+  
+  .img1 img, .img2 img, .img3 img {
+      width: 70px;
+      height: 70px;
   }
   
   .img2 {
-    left: 55%;
-    top: 60%;
-    transform: scaleX(-1) scale(0.7);
+      left: 55%;
+      top: 60%;
+      transform: scaleX(-1) scale(0.7);
   }
   
   .img3 {
-    top: 60%;
-    left: 2%;
-    transform: scaleX(-1) scale(0.6);
+      top: 60%;
+      left: 2%;
+      transform: scaleX(-1) scale(0.6);
   }
   
   .c2 {
-    left: 12%;
+      left: 12%;
   }
   
+  .circleSh {
+      width: 350px;
+      height: 350px;
+      left: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2rem;
+  }
+  
+  h2 {
+      font-size: 1.1rem;
+  }
+  
+  button {
+      padding: 14px 30px;
+      font-size: 13px;
+  }
 }

@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap');
+
+:root {
+    --color01: #040926;
+    --color02: #96acd9;
+    --color03: #ffffff;
+    --color-accent: #5c7fc7;
+    --color-success: #4ecdc4;
+    --color-error: #ff6b6b;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color01);
+    color: var(--color03);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+.bkg {
+    position: fixed;
+    inset: 40px;
+    border: 3px solid var(--color02);
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 1;
+    animation: borderPulse 4s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+    0%, 100% { 
+        opacity: 0.6; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+}
+
+.circleSh {
+    position: fixed;
+    top: -50%;
+    left: -30%;
+    background-image: linear-gradient(180deg, var(--color02), transparent);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    animation: floatCircle 20s ease-in-out infinite;
+}
+
+@keyframes floatCircle {
+    0%, 100% { 
+        transform: translate(0, 0) scale(1); 
+    }
+    50% { 
+        transform: translate(-40px, 30px) scale(1.1); 
+    }
+}
+
+.c1 {
+    position: fixed;
+    top: 9%;
+    right: 70px;
+    background-color: var(--color01);
+    border: 1px solid var(--color02);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: bounce1 2s ease-in-out infinite;
+}
+
+.c2 {
+    position: fixed;
+    top: 9%;
+    right: 100px;
+    background-color: var(--color02);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: bounce1 2s ease-in-out infinite 0.2s;
+}
+
+@keyframes bounce1 {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-10px); 
+    }
+}
+
+.more {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    position: fixed;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color03);
+}
+
+.more1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    position: fixed;
+    top: 7%;
+    left: 7%;
+    transform: translateX(-50%);
+    color: var(--color03);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.context {
+    background: linear-gradient(135deg, var(--color02) 0%, #a8bce0 100%);
+    max-width: 400px;
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: slideInScale 0.8s ease-out;
+}
+
+@keyframes slideInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color01);
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.context > p {
+    font-size: 1.1rem;
+    color: var(--color01);
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--color01);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.total h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color02);
+}
+
+.total h3.result {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-success);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+    width: 3px;
+    height: 400px;
+    background: linear-gradient(90deg, transparent, var(--color02), transparent);
+    margin: 30px 30px;
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.game {
+    background: linear-gradient(135deg, var(--color02) 0%, #a8bce0 100%);
+    max-width: 700px;
+    padding: 20px 20px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+#word {
+    font-size: 1.5rem;
+    letter-spacing: 15px;
+    font-weight: 700;
+    color: var(--color01);
+    margin: 10px 0;
+    text-align: center;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+    min-height: 40px;
+    animation: scaleUp 0.5s ease-out;
+}
+
+#message.win {
+    color: var(--color-success);
+}
+
+#message.lose {
+    color: var(--color-error);
+}
+
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#letters button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color01);
+    color: var(--color03);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#letters button:hover:not(:disabled) {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#letters button:active:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+#letters button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background-color: var(--color01);
+}
+
+#letters button.correct {
+    background-color: var(--color-success);
+    color: var(--color01);
+    animation: pulse 0.5s ease;
+}
+
+#letters button.wrong {
+    background-color: var(--color-error);
+    animation: shake 0.5s ease;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+}
+
+@keyframes shake {
+    0%, 100% { 
+        transform: translateX(0); 
+    }
+    25% { 
+        transform: translateX(-5px); 
+    }
+    75% { 
+        transform: translateX(5px); 
+    }
+}
+
+.game > p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color01);
+    margin-top: 10px;
+}
+
+#attempts {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-error);
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.reset-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--color01), var(--color01));
+    color: var(--color03);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.reset-btn:active {
+    transform: translateY(-1px);
+}
+
+.hangman-visual {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hangman-svg {
+    width: 200px;
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .bkg-frame {
+        inset: 20px;
+    }
+
+    .context {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .context > p {
+        font-size: 1rem;
+    }
+
+    #word {
+        font-size: 2rem;
+        letter-spacing: 10px;
+        min-height: 60px;
+    }
+
+    #letters button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .total h3.result {
+        font-size: 2rem;
+    }
+
+    .plus-sign {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .context > p {
+        font-size: 0.9rem;
+    }
+
+    #word {
+        font-size: 1.5rem;
+        letter-spacing: 8px;
+    }
+
+    #letters {
+        gap: 6px;
+    }
+
+    #letters button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #message {
+        font-size: 1.2rem;
+    }
+
+    .game > p {
+        font-size: 1.1rem;
+    }
+
+    #attempts {
+        font-size: 1.5rem;
+    }
+}

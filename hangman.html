@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/assets/css/hangman.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="src/assets/img/controle-de-video-game.png" type="image/x-icon">
+    <title>Hangman Game</title>
+</head>
+<body>
+    <div class="bkg"></div>
+    <div class="circleSh"></div>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="more">+++</div>
+    <div class="more1">+ <br> + <br> +</div>
+
+    <main>
+        <div class="context">
+            <h1>Hangman Game</h1>
+            <p>Here you can play the hangman game with words that were used during the lessons.</p>
+            
+            <div class="total">
+                <h4>Games won:</h4>
+                <h3 class="result">0</h3>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="game">
+            <div class="hangman-visual">
+                <svg class="hangman-svg" viewBox="0 0 200 250">
+                    
+                    <line x1="10" y1="230" x2="150" y2="230" stroke="#ffffff" stroke-width="4"/>
+                    <line x1="50" y1="230" x2="50" y2="20" stroke="#ffffff" stroke-width="4"/>
+                    <line x1="50" y1="20" x2="130" y2="20" stroke="#ffffff" stroke-width="4"/>
+                    <line x1="130" y1="20" x2="130" y2="50" stroke="#ffffff" stroke-width="4"/>
+                    
+                    <circle id="head" cx="130" cy="70" r="20" stroke="#040926" stroke-width="4" fill="none" opacity="0"/>
+                    
+                    <line id="body" x1="130" y1="90" x2="130" y2="150" stroke="#040926" stroke-width="4" opacity="0"/>
+
+                    <line id="leftArm" x1="130" y1="110" x2="100" y2="130" stroke="#040926" stroke-width="4" opacity="0"/>
+
+                    <line id="rightArm" x1="130" y1="110" x2="160" y2="130" stroke="#040926" stroke-width="4" opacity="0"/>
+
+                    <line id="leftLeg" x1="130" y1="150" x2="110" y2="190" stroke="#040926" stroke-width="4" opacity="0"/>
+
+                    <line id="rightLeg" x1="130" y1="150" x2="150" y2="190" stroke="#040926" stroke-width="4" opacity="0"/>
+                </svg>
+            </div>
+
+            <p id="word">_ _ _ _ _</p>
+            <p id="message"></p>
+            <div id="letters"></div>
+            <p>Attempts left: <span id="attempts">6</span></p>
+            <button class="reset-btn" onclick="resetGame()">🔄 New Game</button>
+        </div>
+    </main>
+
+    <script src="src/js/hangman.js"></script>
+</body>
+</html>
