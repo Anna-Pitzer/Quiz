@@ -14,11 +14,10 @@
 </ul></p>
 <h2>Funcionalidades:</h2>
 <p><ul>
-  <li>Quiz interativo com 5 perguntas sobre a matéria</li>
+  <li>Quiz interativo com 20 perguntas sobre a matéria</li>
   <li>Interface intuitiva</li>
   <li>Resultado final com a quantidade de acertos</li>
-  <li></li>
-  <li></li>
+  <li>Jogo da forca com palavras usadas durante o semestre</li>
 </ul></p>
 <h2>Tecnologias Utilizadas:</h2>
 <p><ul>
